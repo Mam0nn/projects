@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Righteous&display=swap');
+
+:root {
+    --clr-blk: #28282B;
+    --clr-rd: #AA4A44;
+    --clr-bl: #6495ED;
+    --clr-gry: #F5F5F5;
+    --clr-wht: #FFFF;
+
+    --montserrat: "Monserrat", sans-serif;
+    --righteous: "Righteous", sans-serif;
+    --outfit: "Outfit", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--clr-gry);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+}
+
+form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 5rem;
+    font-family: var(--righteous);
+    color: var(--clr-blk);
+}
+
+.header p {
+    font-size: 1rem;
+    font-family: var(--outfit);
+    color: var(--clr-blk);
+    letter-spacing: 5px;
+}
+
+.form-error {
+    position: absolute;
+    top: 105px;
+    background-color: var(--clr-rd);
+    color: var(--clr-wht);
+    padding: 5px 0px;
+    font-family: var(--outfit);
+    font-size: .7rem;
+    border-radius: 4px;
+    text-align: center;
+    width: 230px;
+    /* display: none; */
+}
+
+.form-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-input .form-icon {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid var(--clr-blk);
+    border-right: none;
+    border-radius: 4px 0px 0px 4px;
+    height: 30px;
+}
+
+.form-input input {
+    height: 30px;
+    width: 200px;
+    outline: none;
+    padding: 0px 10px;
+    font-family: var(--outfit);
+    border-radius: 0px 4px 4px 0px;
+    border: 1px solid var(--clr-blk);
+    background-color: transparent;
+}
+
+.form-submit button{
+    width: 230px;
+    height: 30px;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--clr-bl);
+    color: var(--clr-wht);
+    font-family: var(--outfit);
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+
+@media (max-width: 425px) {
+    .header h1 {
+        font-size: 3.75rem;
+    }
+
+    .form-error {
+        top: 85px;
+    }
+}
